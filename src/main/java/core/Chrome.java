@@ -61,6 +61,13 @@ public class Chrome {
 		
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("pass"))).clear();
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("pass"))).sendKeys(password);
+		
+		System.out.println("Size of Password: " + (Dimension) driver.findElement(By.id("pass")).getSize());
+		System.out.println("Location of password: " + (Point) driver.findElement(By.id("pass")).getLocation());
+		
+		System.out.println("Size of Login button: " + (Dimension) driver.findElement(By.id("loginbutton")).getSize());
+		System.out.println("Location of Login button: " + (Point) driver.findElement(By.id("loginbutton")).getLocation());
+		
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("loginbutton"))).click();
 		
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='u_0_a']/div[1]/div[1]/div/a/span/span"))).click();
