@@ -43,7 +43,7 @@ public class Chrome {
 				
 				WebDriverWait wait = new WebDriverWait(driver, 15); //Creating of "wait" Object
 
-				driver.get(url);
+				driver.get(url);  //navigate to http://facebook.com/
 				wait.until(ExpectedConditions.titleIs("Facebook - Log In or Sign Up"));  // waiting until Login Page loads completely
 				
 				String title = driver.getTitle();   //assigns <Login> page title to "title" variable
